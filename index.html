@@ -1,0 +1,58 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bigBox">
+
+<input type="checkbox" id="ackapa" />
+<label id="kapak" for="ackapa">
+  <div id="settings">
+    <i class="fa fa-cog"></i>
+  </div>
+    <div id="dik">
+      <input type="color" oninput="renk(this)" id="renk" value="#e17055" />
+      <button data-attribute="bold" onclick="degistir(this)"><i class="fa fa-bold"></i></button>
+      <button data-attribute="underline" onclick="degistir(this)"><i class="fa fa-underline"></i></button>
+      <button data-attribute="italic" onclick="degistir(this)"><i class="fa fa-italic"></i></button>
+      <button data-attribute="justifyright" onclick="degistirAlign(this)"><i class="fa fa-align-right"></i></button>
+    </div>
+</label>
+
+
+<div id="wrapper">
+ <div id="head">
+    <input type="text" id="headline" onkeyup="enteer(event)" placeholder="Başlık..">
+    <i class="fa fa-check" style="color:#4b4b4b" title="Kaydet"></i>
+    <i class="fa fa-list" title="Notlar" style="font-size:31px; margin-top:4px;color:#2c2c54"></i>
+    <i class="fa fa-plus" id="yeni2" title="Yeni" style="margin:3px 2px;font-size:31px;cursor:cell;color:#4b4b4b"></i>
+  </div>
+  <div id="content">
+    <div id="txt" placeholder="Notunuzu Yazın.." onkeyup="yaziD(event)" oninput="if(this.innerHTML.trim()==='<br>')this.innerHTML=''" contentEditable="true"></div>
+  </div>
+
+
+
+<div id="listbox">
+	<div id="head2">
+    <i id="geri" style="color:#222f3e" title="Geri" class="fa fa-chevron-left"></i>	Notlarım 	<i id="yeni" title="Yeni" class="fa fa-plus"></i>
+  </div>
+	<div id="list-content">
+		<ul id="list"></ul>
+			<ul id="qntt"><li id="adet"></li></ul>
+	</div>
+</div>
+</div>
+
+</div>
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
