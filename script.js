@@ -165,8 +165,8 @@ kaydet.onclick = function() {
             for (var k = 0; k < edit.length; k++) {
                 edit[k].onclick = function() {
 
-                    liKontrol(); // önce listedeki tüm listede classList'ini sildik
-                    this.parentNode.parentNode.classList.add("listede"); // şimdi sadece düzenlenecek elemana ekledik
+                    liKontrol();                                                     // önce listedeki tüm listede classList'ini sildik
+                    this.parentNode.parentNode.classList.add("listede");             // şimdi sadece düzenlenecek elemana ekledik
                     baslik.value = this.parentNode.parentNode.alt;
                     yazi.innerHTML = this.parentNode.parentNode.getAttribute("name"); // düzenleme olayını verdik her edit butonu için
                     area.style.opacity = "1";
